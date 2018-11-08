@@ -1,7 +1,7 @@
 package bot.discord.dbsk;
 
-import discord.Discord;
-import discord.Music;
+import discord.*;
+import net.dv8tion.jda.core.entities.message;
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.core.events.message.react.MessageReactionAddEvent;
 
