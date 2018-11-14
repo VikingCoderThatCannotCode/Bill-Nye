@@ -50,12 +50,12 @@ public class App
     	//Set name
     	discord.setName("Discord Bot Starter Kit");
     	
-		//Send a message.
-		discord.sendMessage(discord.getStatusMessage());
-		
-		//Set up Music
-		Music.setDiscord(discord);
-		Music.configureMusic();
+        //Send a message.
+        discord.sendMessage(discord.getStatusMessage());
+
+        //Set up Music
+        Music.setDiscord(discord);
+        Music.configureMusic();
 
     }
     
