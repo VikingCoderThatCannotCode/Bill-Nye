@@ -64,11 +64,26 @@ public class App
         Message objMsg = evt.getMessage();
         MessageChannel objMsgCh = evt.getChannel();
 
-        if(objMsg.getContentRaw().equals(Constants.PREFIX + "repeat")){
+        if(!objMsg.getContentRaw().startsWith(Constants.PREFIX)){
+            return;
+        }
+        //!cat
+        //0123
+        String command = objMsg.getContentRaw().substring(1);
+        try{
+            command = objMsg.getContentRaw().substring(1,objMsg.getContentRaw().indexOf(" "));
+        }catch(Exception e){}
+        
+        String input = "";
+        try{
+            input = objMsg.getContentRaw().substring(objMsg.getContentRaw().indexOf(" "));
+        }catch(Exception e){}
+        
+        if(command.equals("repeat")){
             for(int i = 0; i < 5; i++){
                 discord.sendMessage("@Kieran Ross My name jeff");
             }
-        }else if(objMsg.getContentRaw().equals(Constants.PREFIX + "ping")){
+        }else if(command.equals(Constants.PREFIX + "ping")){
             discord.sendMessage("pong");
         }
     }
