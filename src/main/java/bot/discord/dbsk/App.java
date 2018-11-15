@@ -66,7 +66,7 @@ public class App
         MessageChannel objMsgCh = evt.getChannel();
 
         if(!objMsg.getContentRaw().startsWith(Constants.PREFIX)){
-            //return;
+            return;
         }
         
         
