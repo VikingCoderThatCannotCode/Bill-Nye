@@ -83,7 +83,7 @@ public class Discord  extends ListenerAdapter{
 		try {
 			//Use the default channel
 			MessageChannel objMsgCh = jda.getTextChannelById(Constants.DEFAULT_CHANNEL_ID);
-                        System.out.println(jda);
+                        System.out.println(message);
 			objMsgCh.sendMessage(message).queue();
 			
 			//No errors met, return true.

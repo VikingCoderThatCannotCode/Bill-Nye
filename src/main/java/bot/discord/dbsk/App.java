@@ -51,7 +51,7 @@ public class App
     	discord.setName("Discord Bot Starter Kit");
     	
         //Send a message.
-        discord.sendMessage(discord.getStatusMessage());
+        discord.sendMessage("online");
 
         //Set up Music
         Music.setDiscord(discord);
