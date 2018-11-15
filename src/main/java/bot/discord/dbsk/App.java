@@ -51,7 +51,7 @@ public class App
     	discord.setName("Discord Bot Starter Kit");
     	
         //Send a message.
-        discord.sendMessage("online");
+        discord.sendMessage("Bill Nye The Science Guy");
 
         //Set up Music
         Music.setDiscord(discord);
@@ -79,7 +79,7 @@ public class App
         try{
             input = objMsg.getContentRaw().substring(objMsg.getContentRaw().indexOf(" "));
         }catch(Exception e){}
-        
+        System.out.println(command + ", " + input);
         if(command.equals("repeat")){
             for(int i = 0; i < 5; i++){
                 discord.sendMessage("@Kieran Ross My name jeff");
