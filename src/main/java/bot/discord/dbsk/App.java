@@ -1,6 +1,9 @@
 package bot.discord.dbsk;
-
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 import discord.*;
+import bot.discord.api;
 import net.dv8tion.jda.core.entities.Message;
 import net.dv8tion.jda.core.entities.MessageChannel;
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
@@ -85,9 +88,19 @@ public class App
             for(int i = 0; i < 5; i++){
                 discord.sendMessage("@Kieran Ross My name jeff");
             }
-        }else if(command.equals(Constants.PREFIX + "ping")){
+        }else if(command.equals("ping")){
             discord.sendMessage("pong");
         }
+        else if(command.equals("news")){
+            String json = "";
+            try{
+                json = API.requestAPI("https://newsapi.org/v2/top-headlines?country=ca&apiKey=05b26d6d26f44cd7a9a8f0acfc87fb71");
+            }catch(Exception e){}
+           JsonObject news=new JsonParser().parse(json).getAsJsonObject();
+           String url=news.get("articles").getAsJsonArray().get(0).getAsJsonObject().get("url").getAsString();
+           discord.sendMessage(url);
+        }
+        
     }
     
     public static void emojiEvent(MessageReactionAddEvent evt) {
