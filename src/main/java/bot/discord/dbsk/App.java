@@ -86,7 +86,7 @@ public class App
         
         if(command.equals("repeat")){
             for(int i = 0; i < 5; i++){
-                discord.sendMessage("@Kieran Ross My name jeff");
+                discord.sendMessage("I'm the smartest man in the world");
             }
         }else if(command.equals("ping")){
             discord.sendMessage("pong");
@@ -100,8 +100,16 @@ public class App
            String url=news.get("articles").getAsJsonArray().get(0).getAsJsonObject().get("url").getAsString();
            discord.sendMessage(url);
         }
-        
+           else if(command.equals("vsauce")){
+                   discord.sendMessage("Vsauce sucks");
+           }
+           else if (command.equals("earth")){
+                   discord.sendMessage("The Earth is flat!");
     }
+    }
+        
+
+    
     
     public static void emojiEvent(MessageReactionAddEvent evt) {
     	//When an emoji is added to a message, this method will be called.
