@@ -100,12 +100,25 @@ public class App
            String url=news.get("articles").getAsJsonArray().get(0).getAsJsonObject().get("url").getAsString();
            discord.sendMessage(url);
         }
-           else if(command.equals("vsauce")){
+        else if(command.equals("vsauce")){
                    discord.sendMessage("Vsauce sucks");
-           }
-           else if (command.equals("earth")){
+        }
+        else if (command.equals("earth")){
                    discord.sendMessage("The Earth is flat!");
-    }
+        }
+        else if (command.equals("play")){
+            Music.play(input);
+            
+        }
+        
+        else if (command.equals("join")){
+            Music.joinChannel( 359845141420310548L);
+        }
+        else if (command.equals("leave")){
+            Music.exitChannel();
+        }
+                
+        
     }
         
 
