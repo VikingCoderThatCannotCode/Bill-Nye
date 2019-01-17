@@ -103,6 +103,21 @@ public class App
         else if(command.equals("vsauce")){
                    discord.sendMessage("Vsauce sucks");
         }
+        else if(command.equals("games")){
+            discord.sendMessage("Video games cause violence kids");
+        }
+        else if (command.equals("Tachanka")){
+            discord.sendMessage("He is the lord and savior");
+        }
+        else if (command.equals("your iq")){
+            discord.sendMessage("My iq is below 50");
+        }
+        else if (command.equals("list")){
+            discord.sendMessage("!vsauce, !news, !games,!earth, !Tachanka, !your iq, !ping, !repeat, !ligma");
+        }
+        else if (command.equals("ligma")){
+                discord.sendMessage("I have ligma");
+        }
         else if (command.equals("earth")){
                    discord.sendMessage("The Earth is flat!");
         }
